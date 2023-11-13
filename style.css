@@ -1,0 +1,49 @@
+* {  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  color: #323238;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+#app {
+  display: grid;
+  grid-template-areas: 
+  "timer sound-cards"
+  "controls sound-cards";
+}
+
+#timer {
+  grid-area: timer;
+  display: flex;
+  margin-bottom: 1.7rem;
+
+  font-size: 12.6rem;
+  font-weight: 500;
+}
+
+#controls {
+  grid-area: controls;
+  display: flex;
+  gap: 4rem;
+}
+
+#sound-cards {
+ grid-area: sound-cards;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 3.2rem;
+ margin-left: 19.2rem;
+}
