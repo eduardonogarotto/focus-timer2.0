@@ -5,7 +5,7 @@
 }
 
 :root {
-  font-size: 62.5%;
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
 }
 
 body {
@@ -14,6 +14,7 @@ body {
   font-size: 1.6rem;
 
   height: 100vh;
+  background-color: #ffffff;
   display: grid;
   place-content: center;
 }
@@ -28,6 +29,7 @@ body {
 #timer {
   grid-area: timer;
   display: flex;
+  align-items: end;
   margin-bottom: 1.7rem;
 
   font-size: 12.6rem;
@@ -37,7 +39,14 @@ body {
 #controls {
   grid-area: controls;
   display: flex;
+  align-items: start;
   gap: 4rem;
+}
+
+#controls button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
 }
 
 #sound-cards {
@@ -46,4 +55,25 @@ body {
  grid-template-columns: 1fr 1fr;
  gap: 3.2rem;
  margin-left: 19.2rem;
+}
+
+#sound-cards button {
+  width: 13.8rem;
+  height: 15.2rem;
+  background-color: #E1E1E6;
+
+  border: 0;
+  border-radius: 2.4rem;
+  cursor: pointer;  
+}
+
+#sound-cards .selected,
+.selected svg path {
+  fill: #ffffff; 
+  background-color: #02799D;
+}
+
+.running .btn-play,
+html:not(.running) .btn-pause {
+  display: none;
 }
